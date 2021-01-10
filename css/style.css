@@ -1,0 +1,85 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+@import url('reset.css');
+#wrap{width: 1000px; margin: 0 auto;}
+body{font: normal 13px/1.6 'Nanum Gothic', Dotum, '돋음', AppleGothic, sans-serif; color:#444; letter-spacing: -0.5px;}
+input, textarea, select{font: normal 13px/1.6 'Nanum Gothic', Dotum, '돋음', AppleGothic, sans-serif; color:#444; letter-spacing: -0.5px;}
+#header{position: relative; background:url(../images/doc_bg.gif) repeat-x 50% 0; height: 130px; z-index: 1;}
+/* 위와같이 입력요소는 폰트의 상속이 이루어지지 않기때문에 따로 지정해주어야한다. */
+#wrap .skipmenu01 > a {background-color: #ed1b29; color: #fff; position: fixed; left: 0; top: -9999px; width: 100%; text-align: center; z-index: 9999; padding: 8px; -webkit-box-shadow: 0 2px 5px rgba(255, 255, 255, 0.7); box-shadow: 0 2px 5px rgba(255, 255, 255, 0.7);}
+#wrap .skipmenu01 > a:focus {top: 0;}
+#wrap .skipmenu02 > a {background-color: #ed1b29; color: #fff; position: fixed; left: 0; top: -9999px; width: 100%; text-align: center; z-index: 9999; padding: 8px; -webkit-box-shadow: 0 2px 5px rgba(255, 255, 255, 0.7); box-shadow: 0 2px 5px rgba(255, 255, 255, 0.7);}
+#wrap .skipmenu02 > a:focus { top: 0; }
+#header .header__logo{padding: 15px 5px;}
+#header .header__sch-frm{width: 336px; height: 39px; padding: 3px 55px 3px 3px; background: url(../images/search_bg.gif) no-repeat 0 0; position: absolute; left: 50%; margin-left: -168px; top: 20px;}
+#header .header__sch-frm input[type="text"]{width: 100%; height: 33px; border: none;}
+#header .header__sch-frm input[type="image"]{position: absolute; top: 0; right: 0;}
+#header .header__utilmenu{position: absolute; top: 30px; right: 0;}
+#header .header__utilmenu li{float: left; position: relative; padding-left: 30px;}
+#header .header__utilmenu li::before{content:''; width: 1px; height: 11px; background-color: #ccc; position: absolute; left: 15px;top: 5px;}
+#header .header__utilmenu li:first-child{padding-left: 0;}
+#header .header__utilmenu li:first-child:before{content: none;}
+#content .content__gnb{position: absolute; top: 84px; width: 100%; height: 47px;}
+#content .content__gnb > li{float: left; width: 16.66666666666667%; border-left: 1px solid #ccc; height: 47px; overflow: hidden; transition: height 0.1s linear;}
+/* CSS에서 애니메이션을 삽입할때는 transition속성을 사용한다. linear는 가속도를 의미한다. */
+#content .content__gnb:hover > li{height: 253px;}
+#content .content__gnb > li:last-child{border-right: 1px solid #ccc;}
+#content .content__gnb > li > a{display: block;width: 100%; height: 47px; text-align: center; line-height: 47px;  font-size: 14px; color: #3d3d3d; font-weight: bold;}
+#content .content__gnb > li > ul{background-color: #fff; display: block; height: 204px; width: 100%; border-bottom: 3px solid #00407D; padding: 5px; position: relative; top: 2px;}
+#content .content__gnb > li > ul:hover{background-color: #eee;}
+#content .content__gnb > li > ul > li::before{content: ''; position: absolute; width: 0; height: 0; top: 7px; left: 5px; border-top: 2px solid transparent; border-bottom: 2px solid transparent; border-left: 2px solid #00407D;}
+/* 삼각형을 만들때는 위와같이 border값을 각각 부여하며 위아래의 색상을 투명transparent를 설정하여 적용한다. */
+#content .content__gnb > li > ul > li{margin-bottom: 5px; padding-left: 8px; word-break: keep-all; position: relative;}
+/* word-break: keep-all;은 단어단위로 글이 떨어지게 만든다. 한글에서만 적용된다. */
+#container{padding-top: 15px; padding-bottom: 30px;}
+#container .main-row1{overflow: hidden;}
+#container .main-row1 .col1{background-color: #fff; width: 270px; float: left;}
+#container .main-row1 .col1 > div, #container .main-row1 .col3 > div{border: 1px solid #ccc; height: 111px; padding: 22px 10px 0px 98px;}
+#container .main-row1 .col1 > div h2{font-size: 13px; font-weight: 700; word-break: keep-all;}
+#container .main-row1 .col1 > div p{font-size: 12px; font-weight: normal; word-break: keep-all;}
+#container .main-row1 .col3 > div h2{font-size: 13px; font-weight: 700; word-break: keep-all;}
+#container .main-row1 .col3 > div p{font-size: 12px; font-weight: normal; word-break: keep-all;}
+#container .main-row1 .col1 > div{position: relative;}
+#container .main-row1 .col1 .bg-box-1::before{content: ''; position: absolute; top: 23px; left: 26px; width: 56px; height: 65px; background: url(../images/m_box_bg01.gif) no-repeat -23px -26px;}
+#container .main-row1 .col1 .bg-box-2::before{content: ''; position: absolute; top: 23px; left: 26px; width: 63px; height: 65px; background: url(../images/m_box_bg02.gif) no-repeat -23px -26px;}
+#container .main-row1 .col1 .bg-box-3::before{content: ''; position: absolute; top: 23px; left: 26px; width: 56px; height: 65px; background: url(../images/m_box_bg03.gif) no-repeat -23px -26px;}
+#container .main-row1 .col1 .bg-box-4::before{content: ''; position: absolute; top: 23px; left: 26px; width: 56px; height: 65px; background: url(../images/m_box_bg04.gif) no-repeat -23px -26px;}
+#container .main-row1 .col3 > div{position: relative;}
+#container .main-row1 .col3 .bg-box-5::before{content: ''; position: absolute; top: 23px; left: 26px; width: 56px; height: 65px; background: url(../images/m_box_bg05_1.gif) no-repeat -23px -26px;}
+#container .main-row1 .col3 .bg-box-6::before{content: ''; position: absolute; top: 23px; left: 26px; width: 56px; height: 65px; background: url(../images/m_box_bg06.gif) no-repeat -23px -26px;}
+#container .main-row1 .col3 .box-7{padding: 22px 10px 10px; margin: 0; text-align: center; background-color: #F5F5F5;}
+#container .main-row1 .col3 .box-7 > ul > li{display: inline; text-align: center; padding: 10px;}
+#container .main-row1 .col3 .box-7 > ul > li > a{display: inline-block; text-indent: -9999px; width: 86px; height: 108px; background: url(../images/ico_ios.gif) no-repeat 0 0;}
+#container .main-row1 .col3 .box-7 > ul > li:last-child > a{background: url(../images/ico_and.gif) no-repeat 0 0;}
+#container .main-row1 .col1 > div:first-child, #container .main-row1 .col3 > div:first-child{border-radius: 5px 5px 0 0;}
+#container .main-row1 .col1 > div:last-child{border-radius: 5px 5px 0 0;}
+#container .main-row1 .col3 > div:last-child{border-radius: 5px 5px 0 0; height: 222px;}
+#container .main-row1 .col2{background-color: #f0f; width: 432px; float: left; margin: 0 14px;}
+#container .main-row1 .col3{width: 270px; float: right;}
+#container .main-row2{overflow: hidden;}
+#container .main-row2 .board-icon1{float: left; border: 1px solid #ccc; border-radius: 5px; width: 490px; height: 200px; margin: 25px 20px 0px 0px; padding: 20px; position: relative;}
+#container .main-row2 .board-icon1 h2{font-size: 18px; font-weight: bold; margin-bottom: 20px;}
+#container .main-row2 .board-icon1 ul{position: relative; padding-left: 120px; background: url(../images/m_box_bg12.gif) no-repeat 0 5px;}
+#container .main-row2 .board-icon1 h2 ~ a{position: relative; right: 18px top 18px;}
+#container .main-row2 .board-icon1 ul > li{display: block; position: relative; padding-bottom: 8px;}
+#container .main-row2 .board-icon1 ul > li > span{position: absolute; right: 0; top: 0;}
+#container .main-row2 .board-icon1 .btn_more{position: absolute; top: 18px; right: 18px;}
+#container .main-row2 .board-icon2{float: left; border: 1px solid #ccc; border-radius: 5px; width: 490px; height: 200px; margin: 25px 0px 0px 0px; padding: 20px; position: relative;}
+#container .main-row2 .board-icon2 h2{font-size: 18px; font-weight: bold; margin-bottom: 20px;}
+#container .main-row2 .board-icon2 ul{position: relative; padding-left: 120px; background: url(../images/m_box_bg11.gif) no-repeat 0 5px;}
+#container .main-row2 .board-icon2 h2 ~ a{position: relative; right: 18px top 18px;}
+#container .main-row2 .board-icon2 ul > li{display: block; position: relative; padding-bottom: 8px;}
+#container .main-row2 .board-icon2 ul > li > span{position: absolute; right: 0; top: 0;}
+#container .main-row2 .board-icon2 .btn_more{position: absolute; top: 18px; right: 18px;}
+#footer{border-top: 1px solid #ccc;}
+#footer footer{position: relative; width: 1000px; margin: 0 auto; padding: 30px 20px; padding: 30px 20px 30px 110px;}
+#footer .symbol_wa1 img{width: 100px; padding-left: 8px;}
+.bootem-menu{overflow: hidden; margin-bottom: 10px;}
+.bootem-menu li{float: left; color: #000; padding-left: 20px; position: relative;}
+.bootem-menu li::before{content: ''; position: absolute; left: 10px; top: 5px; width: 1px; height: 10px; background-color: #ccc;}
+.bootem-menu li:first-child{padding-left: 0px;}
+.bootem-menu li:first-child::before{content: none;}
+.bootem-menu li em{color: #00f;}
+#footer .bottom-logo{position: absolute; top: 30px; left: 20px;}
+#footer .bottom-menu{position: absolute; top: 30px; right: -50px;}
+#container .main-row1 .col2 ul li:last-child{display: none;}
